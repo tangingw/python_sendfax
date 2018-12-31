@@ -16,6 +16,9 @@ To install the Phaxio Python SDK
 
 ## Usage
 
+Add your API key and API secret obtained from Phaxio into `phaxio_key.json`.
+
+Once you are done, type the command below on your command prompt.
 ```python
     python send_fax.py <PHONE NUMBER E.164 format> <filename>
 ```
