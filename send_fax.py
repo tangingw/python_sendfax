@@ -11,6 +11,7 @@ def send_fax(phone_number: str, filename: str) -> SendFaxResponse:
 
     if not os.path.exists("phaxio_key.json"):
 
+        print("phaxio_key.json is not found!")
         exit(1)
 
     else:
@@ -25,8 +26,7 @@ def send_fax(phone_number: str, filename: str) -> SendFaxResponse:
         )
 
         return phaxio.Fax.send(
-            to=phone_number,
-            files=filename
+            to=phone_number, files=filename
         )
 
 
@@ -46,7 +46,7 @@ def main():
 
         print("Too many parameters!!!")
         exit(1)
-        
+
     else:
 
         print(send_fax(sys.argv[0], sys.argv[1]))
